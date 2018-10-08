@@ -1,0 +1,17 @@
+body{
+	background:    rgb(249, 249, 252);
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+	margin-bottom: 500px
+}
+
+header{
+	background: rgba(87, 151, 153, 0.972);
+	padding: 1px;
+	margin-top: 10px
+}
+h1, #start {background-color: #00e927d0;
+font-family: 'Sigmar One', sans-serif;
+font: size 30px;
+padding: 20px;
+margin-top: 10px;}

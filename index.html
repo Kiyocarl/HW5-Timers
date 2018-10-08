@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Trivia Game</title>
+  </head>
+
+  <body>
+    <div class="container"> 
+       
+    <header>
+      <h1 id="top Text-center">Trivia Game</h1>
+    <!-- </header> -->
+
+      <div class="jumbotron text-center" id="gameScreen">
+      <h1 id= "start">START</h1>
+      <div id="show-number"></div>
+      <br>
+
+      <button id="stop">Stop</button>
+      <button id="resume">Resume</button>
+      <!-- <button class='btn btn-primary' id='startBtn'>Start</button> -->
+        <!-- <div id="show-number">counter</div> -->
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="question1"></div>
+    </div>
+   
+
+     <!-- SCRIPT GOES HERE -->
+    <script        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+     <script          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1. 2/js/bootstrap.min.js"></script> -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src= "assets/javasrcipt/app.js">
+     </script>
+      <h3 Time Remaining></h3>
+     <script type="text/javascript">
+
+      var number = 100;
+
+      var intervalId;
+      // $('#start').on("click",start);
+
+      $("#stop").on("click", stop);
+
+      $("#resume").on("click", run);
+
+      function run() {
+        clearInterval(intervalId);
+      ntervalId = setInterval(decrement, 1000);
+      }
+
+      function decrement() {
+
+      number--;
+
+     $("#show-number").html("<h2>" + number + "</h2>");
+
+     if (number === 0) {
+
+      stop();
+
+      alert("Time Up!");
+     }
+     }
+
+     function stop() {
+
+     clearInterval(intervalId);
+     }
+
+     run();
+    
+    </script>
+  </body>
+
+
+</html>
