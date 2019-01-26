@@ -10,8 +10,10 @@ header{
 	padding: 1px;
 	margin-top: 10px
 }
+
 h1, #start {background-color: #00e927d0;
 font-family: 'Sigmar One', sans-serif;
 font: size 30px;
 padding: 20px;
-margin-top: 10px;}
+margin-top: 10px;
+}
